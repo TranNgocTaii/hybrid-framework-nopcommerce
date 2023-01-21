@@ -1,2 +1,8 @@
-package actions.pageObjects;public class LoginPageObject {
+package actions.pageObjects;
+
+public class LoginPageObject {
+
+    public void enterToUsernameTextbox(){
+
+    }
 }

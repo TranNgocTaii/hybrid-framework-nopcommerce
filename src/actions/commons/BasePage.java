@@ -1,2 +1,4 @@
-package actions.commons;public class BasePage {
+package actions.commons;
+
+public class BasePage {
 }

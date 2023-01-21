@@ -1,2 +1,4 @@
-package actions.reportConfig;public class ReportNG {
+package actions.reportConfig;
+
+public class ReportNG {
 }

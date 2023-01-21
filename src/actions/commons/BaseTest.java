@@ -1,2 +1,4 @@
-package actions.commons;public class BaseTest {
+package actions.commons;
+
+public class BaseTest {
 }

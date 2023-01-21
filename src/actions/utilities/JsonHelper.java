@@ -1,2 +1,4 @@
-package actions.utilities;public class JsonHelper {
+package actions.utilities;
+
+public class JsonHelper {
 }

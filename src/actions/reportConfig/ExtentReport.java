@@ -1,2 +1,4 @@
-package actions.reportConfig;public class ExtentReport {
+package actions.reportConfig;
+
+public class ExtentReport {
 }

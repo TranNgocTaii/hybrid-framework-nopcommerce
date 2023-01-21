@@ -1,2 +1,4 @@
-package testdata.com.nopcormmerce.data;public class productData {
+package testdata.com.nopcormmerce.data;
+
+public class productData {
 }

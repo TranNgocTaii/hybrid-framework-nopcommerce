@@ -1,2 +1,4 @@
-package actions.utilities;public class ExcelHelper {
+package actions.utilities;
+
+public class ExcelHelper {
 }

@@ -1,2 +1,4 @@
-package actions.reportConfig;public class AllureReport {
+package actions.reportConfig;
+
+public class AllureReport {
 }

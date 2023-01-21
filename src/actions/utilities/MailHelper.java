@@ -1,2 +1,4 @@
-package actions.utilities;public class MailHelper {
+package actions.utilities;
+
+public class MailHelper {
 }

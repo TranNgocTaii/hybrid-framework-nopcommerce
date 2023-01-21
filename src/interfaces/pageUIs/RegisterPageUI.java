@@ -1,2 +1,4 @@
-package interfaces.pageUIs;public class RegisterPageUI {
+package interfaces.pageUIs;
+
+public class RegisterPageUI {
 }

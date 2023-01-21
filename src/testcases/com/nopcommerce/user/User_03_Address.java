@@ -1,2 +1,4 @@
-package testcases.com.nopcommerce.user;public class User_03_Address {
+package testcases.com.nopcommerce.user;
+
+public class User_03_Address {
 }

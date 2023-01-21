@@ -1,2 +1,4 @@
-package actions.utilities;public class JDBCHelper {
+package actions.utilities;
+
+public class JDBCHelper {
 }
