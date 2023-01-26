@@ -1,51 +1,58 @@
 package javaTester.javaBasic;
 
+import org.testng.annotations.Test;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class Topic_11_Array {
+    int number[] = {5, 8, 100, 11, 60};
 
-    public static void main (String[] args){
-
-        int number [] = {10, 12, 7, 5, 6, 15};
-        int[] student = {10, 12, 7, 5, 6, 15};
-        System.out.println(student[0]);
-        System.out.println(student[1]);
-
-        // Duoc define co dinh bao nhieu phan tu khi viet code (compile)
-        String studentName[] = {"Tai", "Nam", "Long"};
-        studentName[0] = "Hoa";
-        String studentNewName[] = studentName.clone();
-
-        int b[] = new int[10];
-        b[0] = 10;
-
-        for (int i = 0; i <studentName.length; i++){
-            if (studentName[i].equals("Long")){
-                System.out.println("Click on Long");
+    @Test
+    public void TC_01_Find_Max_Number(){
+        int x = 0;
+        for (int i = 0; i < number.length; i++){
+            if (x < number[i]){
+                x = number[i];
             }
         }
-
-        // Khong ket hop voi dieu kien
-        for (String students : studentName){
-            if (students.equals("Long")){
-                System.out.println("Click on Long");
-            }
-        }
-
-        ArrayList<String> stdName = new ArrayList<String>();
-
-        // Khi chay code moi add (Runtime)
-        for (String std : studentName){
-            stdName.add(std);
-        }
-
-        List<String> names = Arrays.asList("Tom", "Jerry", "Donald");
-        for (String name :names){
-            System.out.println("Name: " + name);
-        }
-
-        String std_Name = Arrays.toString(studentName);
+        System.out.println(x);
     }
+
+    @Test
+    public void TC_02_Sum_First_And_Last_Number(){
+        int x = 0;
+        for(int i = 0; i < number.length; i ++){
+            System.out.println(x = number[0] + number[number.length-1]);
+        }
+    }
+
+    @Test
+    public void TC_03_Even_Number(){
+        for(int i = 0; i < number.length; i ++){
+           if (number[i] % 2 == 0){
+               System.out.println(number[i]);
+           }
+        }
+    }
+
+    @Test
+    public void TC_04(){
+        for(int i = 0; i < number.length; i ++){
+            if (number[i] >= 0 & number[i] <= 10){
+                System.out.println(number[i]);
+            }
+        }
+    }
+
+    @Test
+    public void TC_05(){
+        int sum = 0;
+        for(int i = 0; i < number.length; i ++){
+            sum += number[i];
+            }
+        float average = sum/number.length;
+        System.out.println(average);
+        }
 }
