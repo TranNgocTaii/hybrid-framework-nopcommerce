@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class User_01_Register {
+public class Level_01_Register_DRY {
     WebDriver driver;
     String projectPath = System.getProperty("user.dir");
     String emailAddress;

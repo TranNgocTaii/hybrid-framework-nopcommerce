@@ -14,6 +14,10 @@ import java.util.Set;
 public class BasePage {
     private long longTimeout = 30;
 
+    public static BasePage getBasePageOject(){
+        return new BasePage();
+    }
+
     public void sleepInSecond(long timeInSecond) {
         try {
             Thread.sleep(timeInSecond * 1000);
@@ -104,15 +108,15 @@ public class BasePage {
         }
     }
 
-    public By getByXpath(String xpathLocator){
+    private By getByXpath(String xpathLocator){
         return By.xpath(xpathLocator);
     }
 
-    public WebElement getWebElement(WebDriver driver, String xpathLocator){
+    private WebElement getWebElement(WebDriver driver, String xpathLocator){
         return driver.findElement(getByXpath(xpathLocator));
     }
 
-    public List<WebElement> getListWebElement(WebDriver driver, String xpathLocator){
+    private List<WebElement> getListWebElement(WebDriver driver, String xpathLocator){
         return driver.findElements(getByXpath(xpathLocator));
     }
 
