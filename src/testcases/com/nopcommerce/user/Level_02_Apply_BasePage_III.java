@@ -34,7 +34,7 @@ public class Level_02_Apply_BasePage_III extends BasePage {
     }
 
     @Test
-    public void TC_01(){
+    public void TC_01_Register_Emtpy_Data(){
         waitForElementClickable(driver,"//a[@class='ico-register']");
         clickToElement(driver,"//a[@class='ico-register']");
 

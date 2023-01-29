@@ -1,5 +1,9 @@
 package actions.commons;
 
+import actions.pageObjects.*;
+import interfaces.pageUIs.BasePageUI;
+import interfaces.pageUIs.CustomerInfoPageUI;
+import interfaces.pageUIs.MyProductReviewPageUI;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.Color;
@@ -327,6 +331,31 @@ public class BasePage {
     protected void waitForElementClickable(WebDriver driver, String xpathLocator){
         WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
         explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(xpathLocator)));
+    }
+
+    public AddressPageObject openAddressPage(WebDriver driver) {
+        waitForElementClickable(driver, BasePageUI.ADDRESS_LINK);
+        clickToElement(driver, BasePageUI.ADDRESS_LINK);
+        return PageGeneratorManager.getAddressPage(driver);
+    }
+
+    public MyProductReviewPageObject openMyProductReviewPage(WebDriver driver) {
+        waitForElementClickable(driver, BasePageUI.MY_PRODUCT_REVIEW_LINK);
+        clickToElement(driver, BasePageUI.MY_PRODUCT_REVIEW_LINK);
+        return PageGeneratorManager.getMyProductReviewPage(driver);
+    }
+
+
+    public RewardPointPageObject openRewardPointPage(WebDriver driver) {
+        waitForElementClickable(driver, BasePageUI.REWARD_POINT_LINK);
+        clickToElement(driver, BasePageUI.REWARD_POINT_LINK);
+        return PageGeneratorManager.getRewardPointPage(driver);
+    }
+
+    public CustomerInfoPageObject openCustomerInfoPage(WebDriver driver) {
+        waitForElementClickable(driver, BasePageUI.CUSTOMER_INFO_LINK);
+        clickToElement(driver, BasePageUI.CUSTOMER_INFO_LINK);
+        return PageGeneratorManager.getCustomerInfoPage(driver);
     }
 
 }

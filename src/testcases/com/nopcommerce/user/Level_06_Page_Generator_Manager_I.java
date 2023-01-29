@@ -5,15 +5,11 @@ import actions.pageObjects.HomePageObject;
 import actions.pageObjects.LoginPageObject;
 import actions.pageObjects.RegisterPageObject;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import java.util.Random;
-import java.util.concurrent.TimeUnit;
 
 public class Level_06_Page_Generator_Manager_I extends BaseTest {
     private WebDriver driver;
@@ -43,7 +39,7 @@ public class Level_06_Page_Generator_Manager_I extends BaseTest {
 
 
         System.out.println("Pre-Condition - Step 01: Click to Register link");
-        homePage.clickToRegisterLink();
+        homePage.openRegisterLink();
 
         registerPage = new RegisterPageObject(driver);
 
@@ -66,7 +62,7 @@ public class Level_06_Page_Generator_Manager_I extends BaseTest {
 
     @Test
     public void Login_01_Empty_Data() {
-        homePage.clickToLoginLink();
+        homePage.openLoginLink();
 
         loginPage = new LoginPageObject(driver);
 
@@ -78,7 +74,7 @@ public class Level_06_Page_Generator_Manager_I extends BaseTest {
 
     @Test
     public void Login_02_Invalid_Email() {
-        homePage.clickToLoginLink();
+        homePage.openLoginLink();
 
         loginPage = new LoginPageObject(driver);
 
@@ -91,7 +87,7 @@ public class Level_06_Page_Generator_Manager_I extends BaseTest {
 
     @Test
     public void Login_03_Email_Not_Found() {
-        homePage.clickToLoginLink();
+        homePage.openLoginLink();
 
         loginPage = new LoginPageObject(driver);
 
@@ -105,7 +101,7 @@ public class Level_06_Page_Generator_Manager_I extends BaseTest {
 
     @Test
     public void Login_04_Existing_Email_Empty_Password() {
-        homePage.clickToLoginLink();
+        homePage.openLoginLink();
 
         loginPage = new LoginPageObject(driver);
 
@@ -121,7 +117,7 @@ public class Level_06_Page_Generator_Manager_I extends BaseTest {
 
     @Test
     public void Login_05_Existing_Email_Incorrect_Password() {
-        homePage.clickToLoginLink();
+        homePage.openLoginLink();
 
         loginPage = new LoginPageObject(driver);
 
@@ -137,7 +133,7 @@ public class Level_06_Page_Generator_Manager_I extends BaseTest {
 
     @Test
     public void Login_06_Valid_Email_Password() {
-        homePage.clickToLoginLink();
+        homePage.openLoginLink();
 
         loginPage = new LoginPageObject(driver);
 

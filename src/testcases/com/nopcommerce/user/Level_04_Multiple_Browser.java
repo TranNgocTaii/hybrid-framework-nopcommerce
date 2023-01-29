@@ -4,9 +4,6 @@ import actions.commons.BaseTest;
 import actions.pageObjects.HomePageObject;
 import actions.pageObjects.RegisterPageObject;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -14,7 +11,6 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
 
 public class Level_04_Multiple_Browser extends BaseTest {
     private WebDriver driver;
@@ -42,7 +38,7 @@ public class Level_04_Multiple_Browser extends BaseTest {
     @Test
     public void Register_01_Emtpy_Data(){
         System.out.println("Register_01 - Step 01: Click to Register link");
-        homePage.clickToRegisterLink();
+        homePage.openRegisterLink();
 
         registerPage = new RegisterPageObject(driver);
 
@@ -61,7 +57,7 @@ public class Level_04_Multiple_Browser extends BaseTest {
 //    @Test
     public void Register_02_Invalid_Email(){
         System.out.println("Register_02 - Step 01: Click to Register link");
-        homePage.clickToRegisterLink();
+        homePage.openRegisterLink();
 
         registerPage = new RegisterPageObject(driver);
 
@@ -82,7 +78,7 @@ public class Level_04_Multiple_Browser extends BaseTest {
 //    @Test
     public void Register_03_Register_Success(){
         System.out.println("Register_03 - Step 01: Click to Register link");
-        homePage.clickToRegisterLink();
+        homePage.openRegisterLink();
 
         registerPage = new RegisterPageObject(driver);
 
@@ -103,7 +99,7 @@ public class Level_04_Multiple_Browser extends BaseTest {
 //    @Test
     public void Register_04_Register_Existing_Email(){
         System.out.println("Register_04 - Step 01: Click to Register link");
-        homePage.clickToRegisterLink();
+        homePage.openRegisterLink();
 
         registerPage = new RegisterPageObject(driver);
 
@@ -124,7 +120,7 @@ public class Level_04_Multiple_Browser extends BaseTest {
 //    @Test
     public void Register_05_Register_Password_Less_Than_6_Chars(){
         System.out.println("Register_05 - Step 01: Click to Register link");
-        homePage.clickToRegisterLink();
+        homePage.openRegisterLink();
 
         registerPage = new RegisterPageObject(driver);
 
@@ -145,7 +141,7 @@ public class Level_04_Multiple_Browser extends BaseTest {
 //    @Test
     public void Register_06_Register_Invalid_Confirm_Password(){
         System.out.println("Register_06 - Step 01: Click to Register link");
-        homePage.clickToRegisterLink();
+        homePage.openRegisterLink();
 
         registerPage = new RegisterPageObject(driver);
 
