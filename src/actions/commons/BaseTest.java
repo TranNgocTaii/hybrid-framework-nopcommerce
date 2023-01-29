@@ -10,6 +10,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
@@ -39,7 +40,7 @@ public class BaseTest {
             WebDriverManager.edgedriver().setup();
             driver = new EdgeDriver();
         } else if (browserName.equals("opera")){
-            WebDriverManager.operadriver().setup();
+            WebDriverManager.operadriver().create();
             driver = new OperaDriver();
         } else if (browserName.equals("safari")){
             WebDriverManager.safaridriver().setup();
@@ -55,5 +56,10 @@ public class BaseTest {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         return driver;
+    }
+
+    public int generateFakeNumber() {
+        Random rad = new Random();
+        return rad.nextInt(9999);
     }
 }
