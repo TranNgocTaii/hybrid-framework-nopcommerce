@@ -1,7 +1,8 @@
 package testcases.com.nopcommerce.user;
 
 import actions.commons.BaseTest;
-import actions.pageObjects.*;
+import actions.commons.PageGeneratorManager;
+import actions.pageObjects.nopCommerce.user.*;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -12,10 +13,10 @@ import org.testng.annotations.Test;
 public class Level_06_Page_Generator_Manager_III extends BaseTest {
     private WebDriver driver;
     private String projectPath = System.getProperty("user.dir");
-    private HomePageObject homePage;
-    private RegisterPageObject registerPage;
-    private LoginPageObject loginPage;
-    private CustomerInfoPageObject myAccountPage;
+    private UserHomePageObject homePage;
+    private UserRegisterPageObject registerPage;
+    private UserLoginPageObject loginPage;
+    private UserCustomerInfoPageObject myAccountPage;
 
     private String firstName, lastName, invalidPassword, validPassword, existingEmail, notFoundEmail, invalidEmail;
 
@@ -26,7 +27,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest {
 
         driver.get("https://demo.nopcommerce.com/");
 
-        homePage = PageGeneratorManager.getHomePage(driver);
+        homePage = PageGeneratorManager.getUserHomePage(driver);
 
         firstName = "Automation";
         lastName = "FC";

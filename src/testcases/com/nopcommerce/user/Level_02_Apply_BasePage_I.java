@@ -1,3 +1,4 @@
+/*
 package testcases.com.nopcommerce.user;
 
 import actions.commons.BasePage;
@@ -34,7 +35,7 @@ public class Level_02_Apply_BasePage_I {
     }
 
     @Test
-    public void TC_01(){
+    public void TC_01_Register_Emtpy_Data(){
         basePage.waitForElementClickable(driver,"//a[@class='ico-register']");
         basePage.clickToElement(driver,"//a[@class='ico-register']");
 
@@ -146,3 +147,4 @@ public class Level_02_Apply_BasePage_I {
     }
 }
 
+*/

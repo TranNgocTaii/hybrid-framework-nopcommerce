@@ -1,3 +1,4 @@
+/*
 package testcases.com.nopcommerce.user;
 
 import actions.commons.BasePage;
@@ -148,3 +149,4 @@ public class Level_02_Apply_BasePage_II {
     }
 }
 
+*/
