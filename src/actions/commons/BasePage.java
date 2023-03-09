@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Set;
 
 public class BasePage {
-    private long longTimeout = 30;
+    private long longTimeout = GlobalConstants.LONG_TIMEOUT;
 
     public static BasePage getBasePageOject() {
         return new BasePage();
@@ -480,5 +480,9 @@ public class BasePage {
         clickToElement(driver, BasePageUI.LOGOUT_LINK_AT_ADMIN);
         return PageGeneratorManager.getAdminLoginPage(driver);
     }
+
+
+
+
 
 }
