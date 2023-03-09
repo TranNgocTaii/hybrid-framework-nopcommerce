@@ -65,11 +65,58 @@ public class Level_10_DataTable_GRID extends BaseTest {
 
     }
 
-    @Test
     public void Table_03_Enter_To_Header() {
         actualAllCountryValues = homePage.getvalueEachRowAtAllPage();
 
         Assert.assertEquals(actualAllCountryValues, expectedAllCountryValues);
+    }
+
+    @Test
+    public void Table_04_Enter_To_Textbox_At_Any_Row() {
+        homePage.clickToLoadButton();
+        homePage.sleepInSecond(3);
+
+/*        homePage.enterToTextboxAtRowNumberByColumnName("Company", "2", "Company");
+        homePage.sleepInSecond(2);
+
+        homePage.enterToTextboxAtRowNumberByColumnName("Contact Person", "4", "Contact Person");
+        homePage.sleepInSecond(2);
+
+        homePage.enterToTextboxAtRowNumberByColumnName("Order Placed", "6", "123123");
+        homePage.sleepInSecond(2);
+
+        homePage.selectDropDownByColumnNameAtRowNumber("Country","8","Hong Kong");
+        homePage.sleepInSecond(2);
+
+        homePage.selectDropDownByColumnNameAtRowNumber("Country","5","Japan");
+        homePage.sleepInSecond(2);
+
+        homePage.checkToChecboxByColumnNameAtRowNumber("NPO?", "3");
+        homePage.checkToChecboxByColumnNameAtRowNumber("NPO?", "5");
+        homePage.unCheckToChecboxByColumnNameAtRowNumber("NPO?", "1");
+        homePage.unCheckToChecboxByColumnNameAtRowNumber("NPO?", "2");
+        homePage.unCheckToChecboxByColumnNameAtRowNumber("NPO?", "4");*/
+
+        homePage.clickToIconByRowNumber("1","Remove Current Row");
+        homePage.sleepInSecond(2);
+
+        homePage.clickToIconByRowNumber("1","Insert Row Above");
+        homePage.sleepInSecond(2);
+
+        homePage.clickToIconByRowNumber("1","Move Up");
+        homePage.sleepInSecond(2);
+
+        homePage.clickToIconByRowNumber("1","Remove Current Row");
+        homePage.sleepInSecond(2);
+
+        homePage.clickToIconByRowNumber("1","Remove Current Row");
+        homePage.sleepInSecond(2);
+
+        homePage.clickToIconByRowNumber("1","Remove Current Row");
+        homePage.sleepInSecond(2);
+
+
+
     }
     @AfterClass
     public void afterClass(){
