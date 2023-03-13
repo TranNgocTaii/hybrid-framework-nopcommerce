@@ -1,9 +1,8 @@
 package testcases.com.nopcommerce.jquery.datatable;
 
 import actions.commons.BaseTest;
-import actions.pageObjects.jQuery.HomePageObject;
-import actions.pageObjects.jQuery.PageGeneratorManager;
-import actions.pageObjects.nopCommerce.user.*;
+import actions.pageObjects.jQuery.dataTable.HomePageObject;
+import actions.pageObjects.jQuery.dataTable.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;

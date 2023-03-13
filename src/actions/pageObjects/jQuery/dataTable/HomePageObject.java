@@ -1,15 +1,13 @@
-package actions.pageObjects.jQuery;
+package actions.pageObjects.jQuery.dataTable;
 
 import actions.commons.BasePage;
-import interfaces.pageUIs.jQuery.HomePageUI;
+import interfaces.pageUIs.jQuery.dataTable.HomePageUI;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class HomePageObject extends BasePage {
     WebDriver driver;
@@ -97,4 +95,5 @@ public class HomePageObject extends BasePage {
 
 
     }
+
 }

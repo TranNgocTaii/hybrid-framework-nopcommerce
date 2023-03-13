@@ -2,6 +2,7 @@ package actions.commons;
 
 import actions.pageObjects.nopCommerce.admin.AdminLoginPageObject;
 import actions.pageObjects.nopCommerce.user.*;
+import interfaces.pageUIs.jQuery.uploadFiles.BasePageJQueryUI;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.Color;
@@ -392,6 +393,17 @@ public class BasePage {
         }
     }
 
+    protected boolean isImageLoaded(WebDriver driver, String locatorType, String...dynamicValues) {
+        boolean status = (boolean) ((JavascriptExecutor) driver).executeScript(
+                "return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0",
+                getWebElement(driver, getDynamicXpath(locatorType, dynamicValues)));
+        if (status) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     protected void waitForElementVisible(WebDriver driver, String locatorType){
         WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
         explicitWait.until(ExpectedConditions.visibilityOfElementLocated(getByLocator(locatorType)));
@@ -440,6 +452,16 @@ public class BasePage {
     protected void waitForElementClickable(WebDriver driver, String locatorType, String...dynamicValues){
         WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
         explicitWait.until(ExpectedConditions.elementToBeClickable(getByLocator(getDynamicXpath(locatorType, dynamicValues))));
+    }
+
+    public void uploadMultipleFiles(WebDriver driver, String... fileNames){
+        String filePath = GlobalConstants.UPLOAD_FILE;
+        String fullFileName ="";
+        for(String file : fileNames){
+            fullFileName = fullFileName + filePath + file + "\n";
+        }
+        fullFileName = fullFileName.trim();
+        getWebElement(driver, BasePageJQueryUI.UPLOAD_FILE).sendKeys(fullFileName);
     }
 
     public UserAddressPageObject openAddressPage(WebDriver driver) {
